@@ -170,7 +170,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-03-19 10:52:10 / Modified: 12:18:53" itemprop="dateCreated datePublished" datetime="2020-03-19T10:52:10+08:00">2020-03-19</time>
+              <time title="Created: 2020-03-19 10:52:10 / Modified: 12:39:00" itemprop="dateCreated datePublished" datetime="2020-03-19T10:52:10+08:00">2020-03-19</time>
             </span>
 
           
@@ -187,30 +187,20 @@
           <p>想從Medium跳到Gitpage，所以寫了，也順便紀錄一下<br>我下面會整理我在佈署過程中遇到的問題</p>
 <h2 id="Enviorment"><a href="#Enviorment" class="headerlink" title="Enviorment"></a>Enviorment</h2><p><a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">Node.js</a></p>
 <p><a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a></p>
-<h2 id="教學文"><a href="#教學文" class="headerlink" title="教學文"></a>教學文</h2><p><a href="https://medium.com/@bebebobohaha/%E4%BD%BF%E7%94%A8-hexo-gitpage-%E6%90%AD%E5%BB%BA%E5%80%8B%E4%BA%BA-blog-5c6ed52f23db" target="_blank" rel="noopener">如何搭建個人 Blog 使用 Hexo + Gitpage</a></p>
-<p>上述文章已經很詳細了，所以XDD</p>
-<p>但我還是不幸遇到問題，以下紀錄一下</p>
-<blockquote>
-<p>$ hexo d </p>
-</blockquote>
+<h2 id="教學文"><a href="#教學文" class="headerlink" title="教學文"></a>教學文</h2><p><a href="https://medium.com/@bebebobohaha/%E4%BD%BF%E7%94%A8-hexo-gitpage-%E6%90%AD%E5%BB%BA%E5%80%8B%E4%BA%BA-blog-5c6ed52f23db" target="_blank" rel="noopener">如何搭建個人 Blog 使用 Hexo + Gitpage</a><br><br><br><br>上述文章已經很詳細了，所以在此我就不寫了（？？？<br><br>但我還是不幸遇到問題，以下紀錄一下</p>
 <p>我在deploy過程中，遇到了Permission denied</p>
 <blockquote>
 <p>Error: Permission denied (publickey)</p>
 </blockquote>
-<p>我在此因為沒設定 github SSH key，所以deploy失敗</p>
-<p><a href="https://blog.jaycetyle.com/2018/02/github-ssh/" target="_blank" rel="noopener">SSH key產生教學</a></p>
-<p>搞定SSH Key後，仍然失敗XDDD</p>
-<p>解決方式：<br>到一開始init的folder中，刪除.deploy.git這個資料夾</p>
-<p>接著重新deploy</p>
+<p>我在此因為沒設定 github SSH key，所以deploy失敗<br><br>解法：<br><a href="https://blog.jaycetyle.com/2018/02/github-ssh/" target="_blank" rel="noopener">SSH key產生教學</a></p>
+<p>搞定SSH Key後，仍然失敗XDDD<br><br>解法：<br>到一開始init的folder中，刪除.deploy.git這個資料夾，接著</p>
 <blockquote>
 <p>$ hexo g</p>
 </blockquote>
 <blockquote>
 <p>$ hexo d</p>
 </blockquote>
-<h2 id="Folder"><a href="#Folder" class="headerlink" title="Folder"></a>Folder</h2><p>scaffolds : 文章的template，所有你寫的文章或者page都是基於這個架構上面</p>
-<p>source : md檔案所在位置，要刪除文章、編輯文章都在這，source資料夾中絕對不能沒有任何md，否則Gitpage會404，所以至少發一篇文章之後再來刪除Quickstart那篇</p>
-<p>themes : blog主題存放位置，google hexo themes 會有一大堆主題，可以任選，每天換一個？<br>注意修改主題時候，冒號後有一個半行空格，如果沒有是會失敗的</p>
+<h2 id="Folder"><a href="#Folder" class="headerlink" title="Folder"></a>Folder</h2><p>scaffolds : 文章的template，所有你寫的文章或者page都是基於這個架構上面<br><br><br>source : md檔案所在位置，要刪除文章、編輯文章都在這，source資料夾中絕對不能沒有任何md，否則Gitpage會404，所以至少發一篇文章之後再來刪除Quickstart那篇<br><br><br>themes : blog主題存放位置，google hexo themes 會有一大堆主題，可以任選，每天換一個？<br>注意修改主題時候，冒號後有一個半行空格，如果沒有是會失敗的<br></p>
 <blockquote>
 <p>theme: theme_name </p>
 </blockquote>
@@ -224,12 +214,24 @@
 <blockquote>
 <p>$ hexo d</p>
 </blockquote>
-<h2 id="編輯文章"><a href="#編輯文章" class="headerlink" title="編輯文章"></a>編輯文章</h2><p>gitpage用markdown語法，我目前是用VScode在編寫，有關語法部分請參考<br><a href="https://markdown.tw/" target="_blank" rel="noopener">markdown語法</a></p>
+<h2 id="編輯文章"><a href="#編輯文章" class="headerlink" title="編輯文章"></a>編輯文章</h2><p>Github page用markdown語法，我目前是用VScode在編寫，有關語法部分請參考<br><a href="https://markdown.tw/" target="_blank" rel="noopener">markdown語法</a></p>
 <p>這裡推薦兩個vscode的extension for markdown</p>
 <p><a href="https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one" target="_blank" rel="noopener">markdown all in one</a></p>
 <p><a href="https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced" target="_blank" rel="noopener">markdown preview enhanced</a></p>
-<p>大概是這樣，基本上都在寫我遇到的問題解決方式，所以給了很多連結</p>
-<p>那麼下次再見</p>
+<br>
+hexo不難，基本上都在寫我遇到的問題及解決方式，所以給了很多連結，那就這樣子吧ㄅㄅ
+
+
+
+
+
+
+
+
+
+
+
+
 
       
     </div>
