@@ -192,7 +192,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Lato', "Noto Serif TC", sans-serif;
+  font-family: 'Lato', 'Lato', "Noto Serif TC", sans-serif;
   font-weight: bold;
   line-height: 1.5;
   margin: 20px 0 15px;
@@ -988,7 +988,7 @@ pre .javascript .function {
 }
 .site-title {
   display: inline-block;
-  font-family: 'Lato', "Noto Serif TC", sans-serif;
+  font-family: 'Amatic SC', 'Lato', "Noto Serif TC", sans-serif;
   font-size: 1.375em;
   font-weight: normal;
   line-height: 1.5;
@@ -1164,7 +1164,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #defbe4;
+  background: #05860a;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
